@@ -28,3 +28,14 @@ func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options conn
   window?.makeKeyAndVisible()
 }
 ```
+
+# View Notes
+
+- View Debugger Tool: While App is running, click the stack of cards icon
+- Called: "Debug View Hierarchy"
+
+### Navigation Controller
+
+- Can't show by itself
+- Has to show an Array of View Controllers
+- The View Controller is where you configure the tab bar titles and icons
