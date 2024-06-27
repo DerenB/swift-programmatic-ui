@@ -9,19 +9,21 @@
 /* Begin PBXBuildFile section */
 		150FF3192C2DFC2500FA0C55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150FF3182C2DFC2500FA0C55 /* AppDelegate.swift */; };
 		150FF31B2C2DFC2500FA0C55 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150FF31A2C2DFC2500FA0C55 /* SceneDelegate.swift */; };
-		150FF31D2C2DFC2500FA0C55 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150FF31C2C2DFC2500FA0C55 /* ViewController.swift */; };
 		150FF3222C2DFC2600FA0C55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 150FF3212C2DFC2600FA0C55 /* Assets.xcassets */; };
 		150FF3252C2DFC2600FA0C55 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 150FF3242C2DFC2600FA0C55 /* Base */; };
+		150FF32D2C2E06AA00FA0C55 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150FF32C2C2E06AA00FA0C55 /* SearchVC.swift */; };
+		150FF32F2C2E164900FA0C55 /* FavoritesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150FF32E2C2E164900FA0C55 /* FavoritesListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		150FF3152C2DFC2500FA0C55 /* GitHubFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		150FF3182C2DFC2500FA0C55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		150FF31A2C2DFC2500FA0C55 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		150FF31C2C2DFC2500FA0C55 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		150FF3212C2DFC2600FA0C55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		150FF3242C2DFC2600FA0C55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		150FF3262C2DFC2600FA0C55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		150FF32C2C2E06AA00FA0C55 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		150FF32E2C2E164900FA0C55 /* FavoritesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +58,11 @@
 			children = (
 				150FF3182C2DFC2500FA0C55 /* AppDelegate.swift */,
 				150FF31A2C2DFC2500FA0C55 /* SceneDelegate.swift */,
-				150FF31C2C2DFC2500FA0C55 /* ViewController.swift */,
 				150FF3212C2DFC2600FA0C55 /* Assets.xcassets */,
 				150FF3232C2DFC2600FA0C55 /* LaunchScreen.storyboard */,
 				150FF3262C2DFC2600FA0C55 /* Info.plist */,
+				150FF32C2C2E06AA00FA0C55 /* SearchVC.swift */,
+				150FF32E2C2E164900FA0C55 /* FavoritesListVC.swift */,
 			);
 			path = GitHubFollowers;
 			sourceTree = "<group>";
@@ -134,7 +137,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				150FF31D2C2DFC2500FA0C55 /* ViewController.swift in Sources */,
+				150FF32F2C2E164900FA0C55 /* FavoritesListVC.swift in Sources */,
+				150FF32D2C2E06AA00FA0C55 /* SearchVC.swift in Sources */,
 				150FF3192C2DFC2500FA0C55 /* AppDelegate.swift in Sources */,
 				150FF31B2C2DFC2500FA0C55 /* SceneDelegate.swift in Sources */,
 			);
