@@ -34,8 +34,20 @@ func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options conn
 - View Debugger Tool: While App is running, click the stack of cards icon
 - Called: "Debug View Hierarchy"
 
+### Create View
+
+- Created with Cocoa Touch Class
+- Subclass of UIViewController
+
 ### Navigation Controller
 
 - Can't show by itself
 - Has to show an Array of View Controllers
 - The View Controller is where you configure the tab bar titles and icons
+
+# Custom Components
+
+### Buttons
+
+- Created with Cocoa Touch Class
+- Subclass of UIButton
