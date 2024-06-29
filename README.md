@@ -29,12 +29,12 @@ func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options conn
 }
 ```
 
-# View Notes
+# :red_square: View Notes
 
 - View Debugger Tool: While App is running, click the stack of cards icon
 - Called: "Debug View Hierarchy"
 
-### Create View
+### :small_blue_diamond: Create View
 
 - Created with Cocoa Touch Class
 - Subclass of UIViewController
