@@ -56,3 +56,23 @@ func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options conn
 
 - Created with Cocoa Touch Class
 - Subclass of UITextField
+
+# Keyboard Functions
+
+### Dismiss Keyboard with tap
+
+- When keyboard is open, tap somewhere else on thee screen to close the keyboard
+- Call function in `viewDidLoad()` function
+```
+func createDismissKeyboardTapGesture() {
+  let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))      
+  view.addGestureRecognizer(tap)
+}
+```
+
+### Keyboard Return button
+
+- Can customize what the return button says
+- Changed in the UITextField
+- Each UITextField can have a different return button label
+- Make return say "Go": `returnKeyType = .go`
