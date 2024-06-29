@@ -53,3 +53,9 @@ class GFButton: UIButton {
     
     
 }
+
+
+#Preview {
+    let button = GFButton(backgroundColor: .red, title: "Set Date")
+    return button
+}

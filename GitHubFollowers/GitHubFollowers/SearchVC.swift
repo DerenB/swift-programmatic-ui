@@ -14,6 +14,8 @@ class SearchVC: UIViewController {
     let usernameTextField = GFTextField()
     let callToActionButton = GFButton(backgroundColor: .systemGreen, title: "Get Followers")
     
+    /// Checks if the field is empty
+    var isUsernameEntered: Bool { return !usernameTextField.text!.isEmpty }
     
     /// Gets called only on the first appearance
     override func viewDidLoad() {
@@ -53,6 +55,12 @@ class SearchVC: UIViewController {
     
     /// Function for sending data with the button
     @objc func pushFollowerListVC() {
+        /// Checks if the field is empty
+        guard isUsernameEntered else {
+            print("No Username")
+            return
+        }
+        
         /// Creates the instance
         let followerListVC = FollowerListVC()
         
@@ -129,4 +137,9 @@ extension SearchVC: UITextFieldDelegate {
         pushFollowerListVC()
         return true
     }
+}
+
+
+#Preview {
+    SearchVC()
 }
