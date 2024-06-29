@@ -30,6 +30,9 @@ class SearchVC: UIViewController {
         
         /// Call the Button function
         configureCallToActionButton()
+        
+        /// Function that enables keyboard dismissal
+        createDismissKeyboardTapGesture()
     }
     
     
@@ -37,6 +40,30 @@ class SearchVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
+    }
+    
+    
+    /// Function that enables tap to dismiss keyboard
+    func createDismissKeyboardTapGesture() {
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        
+        view.addGestureRecognizer(tap)
+    }
+    
+    
+    /// Function for sending data with the button
+    @objc func pushFollowerListVC() {
+        /// Creates the instance
+        let followerListVC = FollowerListVC()
+        
+        /// Takes the text from the UITextField and assigns to username
+        followerListVC.username = usernameTextField.text
+        
+        /// Sets the title
+        followerListVC.title = usernameTextField.text
+        
+        /// Pushes the View to the Navigation controller
+        navigationController?.pushViewController(followerListVC, animated: true)
     }
     
     
@@ -64,6 +91,9 @@ class SearchVC: UIViewController {
     func configureTextField() {
         view.addSubview(usernameTextField)
         
+        /// Sets the Delegate
+        usernameTextField.delegate = self
+        
         NSLayoutConstraint.activate([
             usernameTextField.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 48),
             usernameTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
@@ -77,11 +107,26 @@ class SearchVC: UIViewController {
     func configureCallToActionButton() {
         view.addSubview(callToActionButton)
         
+        /// Calls the function for clicking the button
+        callToActionButton.addTarget(self, action: #selector(pushFollowerListVC), for: .touchUpInside)
+        
+        /// Constraints
         NSLayoutConstraint.activate([
             callToActionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
             callToActionButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
             callToActionButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
             callToActionButton.heightAnchor.constraint(equalToConstant: 50)
         ])
+    }
+}
+
+
+/// Extension for Tapping the Return Key
+extension SearchVC: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        /// Calls the function for submitting the search
+        pushFollowerListVC()
+        return true
     }
 }
