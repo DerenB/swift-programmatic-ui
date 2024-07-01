@@ -70,22 +70,54 @@
 		150FF3172C2DFC2500FA0C55 /* GitHubFollowers */ = {
 			isa = PBXGroup;
 			children = (
-				150FF3182C2DFC2500FA0C55 /* AppDelegate.swift */,
-				150FF31A2C2DFC2500FA0C55 /* SceneDelegate.swift */,
-				150FF3212C2DFC2600FA0C55 /* Assets.xcassets */,
-				150FF3232C2DFC2600FA0C55 /* LaunchScreen.storyboard */,
+				157529552C33339B0088A516 /* CustomViews */,
+				157529562C3333CD0088A516 /* Extensions */,
+				157529542C3333660088A516 /* Screens */,
+				157529572C33342B0088A516 /* Support */,
 				150FF3262C2DFC2600FA0C55 /* Info.plist */,
-				150FF32C2C2E06AA00FA0C55 /* SearchVC.swift */,
-				150FF32E2C2E164900FA0C55 /* FavoritesListVC.swift */,
-				150FF3302C2E27F100FA0C55 /* GFButton.swift */,
-				150FF3322C2E59AD00FA0C55 /* GFTextField.swift */,
-				154D08972C30893B007DCEB1 /* FollowerListVC.swift */,
-				1577F50C2C30E50D0090CEEC /* GFTitleLabel.swift */,
-				1577F50E2C30E6BF0090CEEC /* GFBodyLabel.swift */,
-				1577F5102C30E7A60090CEEC /* GFAlertVC.swift */,
-				156C384E2C3200EA00FB164B /* UIViewController+Ext.swift */,
 			);
 			path = GitHubFollowers;
+			sourceTree = "<group>";
+		};
+		157529542C3333660088A516 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				150FF32E2C2E164900FA0C55 /* FavoritesListVC.swift */,
+				154D08972C30893B007DCEB1 /* FollowerListVC.swift */,
+				150FF32C2C2E06AA00FA0C55 /* SearchVC.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		157529552C33339B0088A516 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				1577F5102C30E7A60090CEEC /* GFAlertVC.swift */,
+				1577F50E2C30E6BF0090CEEC /* GFBodyLabel.swift */,
+				150FF3302C2E27F100FA0C55 /* GFButton.swift */,
+				150FF3322C2E59AD00FA0C55 /* GFTextField.swift */,
+				1577F50C2C30E50D0090CEEC /* GFTitleLabel.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		157529562C3333CD0088A516 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				156C384E2C3200EA00FB164B /* UIViewController+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		157529572C33342B0088A516 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				150FF3212C2DFC2600FA0C55 /* Assets.xcassets */,
+				150FF3182C2DFC2500FA0C55 /* AppDelegate.swift */,
+				150FF3232C2DFC2600FA0C55 /* LaunchScreen.storyboard */,
+				150FF31A2C2DFC2500FA0C55 /* SceneDelegate.swift */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
