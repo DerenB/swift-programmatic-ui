@@ -16,7 +16,7 @@ class NetworkManager {
     
     
     /// GET
-    func getFollowers(for username: String, page: Int, completed: @escaping ([Follower]?, String?) -> Void) {
+    func getFollowers(for username: String, page: Int, completed: @escaping (Result<[Follower], GFError>) -> Void) {
         
         
         /// URL
@@ -26,7 +26,7 @@ class NetworkManager {
         /// Checks if it's a valid URL
         /// Creates a URL object if valid
         guard let url = URL(string: endpoint) else {
-            completed(nil, "This username created an invalid request. Please try again.")
+            completed(.failure(.invalidUsername))
             return
         }
         
@@ -36,21 +36,21 @@ class NetworkManager {
             
             /// Checks if the error exists
             if let _ = error {
-                completed(nil, "Unable to complete the request. Check Connection.")
+                completed(.failure(.unableToComplete))
                 return
             }
             
             
             /// Checks if response is not NIL, checks if the status code is 200
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                completed(nil, "Invalid response from the server. Please try again.")
+                completed(.failure(.invalidResponse))
                 return
             }
             
             
             /// Checks if the data is bad
             guard let data = data else {
-                completed(nil, "The data received from the server is invalid.")
+                completed(.failure(.invalidData))
                 return
             }
             
@@ -60,9 +60,9 @@ class NetworkManager {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 let followers = try decoder.decode([Follower].self, from: data)
-                completed(followers, nil)
+                completed(.success(followers))
             } catch {
-                completed(nil, "The data received from the server is invalid bro.")
+                completed(.failure(.invalidData))
             }
         }
         
