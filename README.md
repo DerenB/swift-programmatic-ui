@@ -5,13 +5,6 @@ Following Sean Allen's course on Webkit
 - [Sean Allen Home Page](https://seanallen.teachable.com/courses/)
 - [Course Link](https://seanallen.teachable.com/courses/enrolled/681906)
 
-# Table of Contents
-
-1. [Project Setup]()
-2. [View Notes]()
-3. [Custom Components]()
-4. [Keyboard Functions](#keyboardFunctions)
-
 # :red_square: Project Setup
 
 ### :small_orange_diamond: Remove Storyboard & References
@@ -64,7 +57,7 @@ func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options conn
 - Created with Cocoa Touch Class
 - Subclass of UITextField
 
-# :red_square: Keyboard Functions <a id="keyboardFunctions"></a>
+# :red_square: Keyboard Functions
 
 ### :small_orange_diamond: Dismiss Keyboard with tap
 
