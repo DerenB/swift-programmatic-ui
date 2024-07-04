@@ -76,3 +76,43 @@ func createDismissKeyboardTapGesture() {
 - Changed in the UITextField
 - Each UITextField can have a different return button label
 - Make return say "Go": `returnKeyType = .go`
+
+# :red_square: ARC - Automatic Reference Counting
+
+- Keeps track of the number of references in memory
+- Won't de-allocate object in memory unless the reference count is zero
+- Example with 1 reference:
+```
+class Developer {
+  let name: String
+  var machine: MacBook?
+  init(name: String) {
+    self.name = name
+  }
+}
+// Counts as 1 reference:
+var sean: Developer? = Developer(name: "Sean")
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
