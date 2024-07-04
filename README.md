@@ -81,8 +81,11 @@ func createDismissKeyboardTapGesture() {
 
 - Keeps track of the number of references in memory
 - Won't de-allocate object in memory unless the reference count is zero
+- If not every reference is deleted, it creates a memory leak
+- Add `weak` to the variable to prevent this
+  - Example: `weak var owner: Developer?`
 
-### 1 Reference count
+### :small_orange_diamond: 1 Reference count
 
 - Example with 1 reference:
 ```
@@ -94,9 +97,34 @@ class Developer {
   }
 }
 
-var sean: Developer? = Developer(name: "Sean")
+var sean: Developer? = Developer(name: "Sean") // This is 1 reference
 ```
 
+### :small_orange_diamond: 2 Reference Count
+
+```
+class Developer {
+  let name: String
+  var machine: MacBook?
+  init(name: String) {
+    self.name = name
+  }
+}
+
+class MacBook {
+  let serialNumber: Int
+  var owner: Developer?
+  init(serialNumber: Int) {
+    self.serialNumber = serialNumber
+  }
+}
+
+var sean: Developer? = Developer(name: "Sean") // This is 1 reference
+var spaceGray: MacBook? = MacBook(serialNumber: 23)
+
+sean?.machine = spaceGray
+spaceGray?.owner = sean // This is 2 reference
+```
 
 
 
