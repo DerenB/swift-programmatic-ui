@@ -81,6 +81,9 @@ func createDismissKeyboardTapGesture() {
 
 - Keeps track of the number of references in memory
 - Won't de-allocate object in memory unless the reference count is zero
+
+### 1 Reference count
+
 - Example with 1 reference:
 ```
 class Developer {
@@ -90,7 +93,7 @@ class Developer {
     self.name = name
   }
 }
-// Counts as 1 reference:
+
 var sean: Developer? = Developer(name: "Sean")
 ```
 
