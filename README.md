@@ -64,7 +64,7 @@ func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options conn
 - Created with Cocoa Touch Class
 - Subclass of UITextField
 
-# :red_square: Keyboard Functions <a name="keyboardFunctions"></a>
+# :red_square: Keyboard Functions <a id="keyboardFunctions"></a>
 
 ### :small_orange_diamond: Dismiss Keyboard with tap
 
