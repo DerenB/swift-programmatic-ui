@@ -34,7 +34,10 @@ class GFAvatarImageView: UIImageView {
         image = placeholderImage
         
         translatesAutoresizingMaskIntoConstraints = false
-        
+    }
+    
+    
+    func downloadImage(from urlString: String) {
         
     }
 }
